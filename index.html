@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunity Board SID4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Opportunity Board SID4</h1>
+        <span>Available: <span id="available-count">0</span> | Saved: <span id="saved-count">0</span></span>
+    </header>
+
+    <nav>
+        <button type="button" data-filter="all" class="filter-btn active" aria-pressed="true">All</button>
+        <button type="button" data-filter="internship" class="filter-btn" aria-pressed="false">Internships</button>
+        <button type="button" data-filter="scholarship" class="filter-btn" aria-pressed="false">Scholarships</button>
+    </nav>
+
+    <main>
+        <section id="available-section">
+            <h2>Available</h2>
+            <div class="add-opportunity">
+                <label for="opportunity-input">Add Opportunity</label>
+                <input type="text" id="opportunity-input" placeholder="Enter opportunity title">
+                <button type="button" id="add-btn">Add</button>
+                <p id="error-message" role="alert" aria-live="polite"></p>
+            </div>
+            <div id="available-list" class="opportunity-grid"></div>
+        </section>
+
+        <section id="saved-section">
+            <h2>Saved</h2>
+            <div id="saved-list" class="opportunity-grid"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
